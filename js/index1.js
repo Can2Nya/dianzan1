@@ -49,7 +49,7 @@ function getLocation() {
           coords = r.point;
           dis = GetDistance(r.point.lat, r.point.lng, 26.07, 112.07);//经纬度(维度在前,经度在后)
           dis = Math.round(dis);
-          console.log(dis);
+          alert(dis);
           // Tex.innerHTML = "还有" + dis + "公里";
           // btn.innerText = "参与活动";
           // flag = true;
