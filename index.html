@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/zepto.fullpage.css">
+  <link rel="stylesheet" href="../css/animate.css">
+  <title>hh</title>
+</head>
+<body>
+  <div id="music" class="music">
+      <a class="music-btn"></a>
+  </div>
+  <div class="wp">
+    <div class="wp-inner">
+        <div class="page page-1">
+          <div class="item item-1 js-animate animated" data-animate="fadeIn">
+            <div class="title js-animate animated" data-animate="fadeInUp">
+              <img src="/img/01/biaoti.png" alt="" width="100%">
+            </div>
+          </div>
+        </div>
+        <div class="page page-2">
+          <div class="item item-2 js-animate animated" data-animate="fadeIn">
+            <div class="title js-animate animated" data-animate="fadeInLeft">
+              <img src="/img/02/biaoti.png" alt="" width="100%">
+            </div>
+          </div>
+        </div>
+        <div class="page page-3">
+          <div class="item item-3 js-animate animated" data-animate="fadeIn">
+            <div class="title js-animate animated" data-animate="fadeInRight">
+              <img src="/img/03/biaoti.png" alt="" width="100%">
+            </div>
+          </div>
+        </div>
+        <div class="page page-4">
+          <div class="item item-4 js-animate animated" data-animate="fadeIn">
+            <div class="title js-animate animated" data-animate="fadeInRight">
+              <img src="/img/04/biaoti.png" alt="" width="100%">
+            </div>
+          </div>
+        </div>
+        <div class="page page-5">
+          <div class="item item-5 js-animate animated" data-animate="fadeIn">
+              <div class="title js-animate animated" data-animate="fadeInLeft">
+                  <img src="/img/05/biaoti.png" alt="" width="100%">
+                </div>
+          </div>
+        </div>
+        <div class="page page-6">
+          <div class="item item-6 js-animate animated" data-animate="fadeIn">
+              <div class="title js-animate animated" data-animate="fadeInLeft">
+                  <img src="/img/06/biaoti.png" alt="" width="100%">
+                </div>
+          </div>
+        </div>
+        <div class="page page-7">
+          <div class="item item-7 js-animate animated" data-animate="fadeIn">
+            <div class="title js-animate animated" data-animate="fadeInUp">
+              <h5>距离过年还有<i>9</i>天</h5>
+              <img src="/img/07/biaoti.png" alt="" width="100%">
+            </div>
+          </div>
+        </div>
+        <div class="page page-8">
+          <div class="item item-8 js-animate animated" data-animate="fadeIn">
+              <div class="title js-animate animated" data-animate="fadeInUp">
+                  <h5>我距离<br>长宁市中心<br>还有<i>???</i>公里</h5>
+                  <div class="kuang">获取我的位置</div>
+                </div>
+          </div>
+        </div>
+        <div class="page page-9">
+          <div class="item item-9 js-animate animated" data-animate="fadeIn">
+              <div class="title js-animate animated" data-animate="fadeInLeft">
+                  <img src="/img/09/biaoti.png" alt="" width="100%">
+                </div>
+          </div>
+        </div>
+        <!-- <div class="page page-10">
+          <div class="item item-10 js-animate animated" data-animate="fadeIn">
+          </div>
+        </div> -->
+      </div>
+    </div>
+</div>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/zepto.fullpage.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="../js/shepeirem.js"></script>
+<script src="../js/index1.js"></script>
+<script>
+  $('.wp-inner').fullpage({
+    duration: 100,
+    change: function (e) {
+      // 移除动画属性
+      $('.page').eq(e.cur).find('.js-animate').each(function() {
+          $(this).removeClass($(this).data('animate')).hide();
+      });
+    },
+    afterChange: function (e) {
+      // 添加动画属性
+      $('.page').eq(e.cur).find('.js-animate').each(function () {
+          $(this).addClass($(this).data('animate')).show();
+      });
+      // console.log(e.cur)
+      // 火车票那页不允许滑动
+      // if(e.cur == 7) {
+      //   if(loadUser()){
+      //     $('#name').val(localStorage.name).attr('disabled', true);
+      //     $('#sheng').val(localStorage.sheng).attr('disabled', true).trigger('change');
+      //     $('#didian').val(localStorage.didian).attr('disabled', true);
+      //   }
+      //   $.fn.fullpage.stop();
+      // };
+
+      // if(e.cur == 8) $.fn.fullpage.start();
+      // // 最后一页不动
+      // if(e.cur == 9) $.fn.fullpage.stop();
+    }
+  });
+</script>
+<script>
+  //音乐需求
+    // var bgAudio = new Audio();
+    // bgAudio.loadStatus = 'unload';
+    // bgAudio.loop = true;
+    // function loadAudio(audio, url, callback) {
+    //     audio.src = url;
+    //     audio.load();
+    //     audio.addEventListener('canplay', function () {
+    //         bgAudio.loadStatus = 'loaded';
+    //         callback();
+    //     });
+    //     audio.addEventListener('loadstart', function () {
+    //         bgAudio.loadStatus = 'loading';
+    //     });
+    // }
+    // function playAudio(){
+    //     if (bgAudio.loadStatus === 'unload') {
+    //         loadAudio(bgAudio, '../media/bg.mp3', function () {
+    //             playAudio();
+    //         });
+    //         return 1;
+    //     }
+    //     bgAudio.play();
+    // }
+    // function stopAudio() {
+    //     bgAudio.pause();
+    // }
+    // bgAudio.addEventListener('playing' ,function (e) {
+    //     $('#music .music-btn').addClass('play');
+    // });
+    // bgAudio.addEventListener('pause' ,function (e) {
+    //     $('#music .music-btn').removeClass('play');
+    // });
+    // $('body').one('touchstart', function () {
+    //     playAudio();
+    //     $('#music').on('touchstart', function (e) {
+    //         if (bgAudio.paused) {
+    //             playAudio();
+    //             return 0;
+    //         }
+    //         stopAudio();
+    //         return 1;
+    //     });
+    // });
+    // window.onload = function() {
+    //     if (bgAudio.loadStatus !== 'unload') {return;}
+    //     playAudio();
+    // };
+</script>
+</body>
+<body>
