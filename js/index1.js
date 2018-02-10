@@ -42,11 +42,12 @@ function getLocation() {
   var map = new BMap.Map("allmap");
   var point = new BMap.Point(108.95, 34.27);
   var geolocation = new BMap.Geolocation();
-  geolocation.getCurrentPosition(function (r) {
-      console.log(r.point)
+  try{
+    geolocation.getCurrentPosition(function (r) {
+      // console.log(r.point)
       if (this.getStatus() == BMAP_STATUS_SUCCESS) {
           coords = r.point;
-          dis = GetDistance(r.point.lat, r.point.lng, 26.07, 112.07);//永州经纬度(维度在前,经度在后)
+          dis = GetDistance(r.point.lat, r.point.lng, 26.07, 112.07);//经纬度(维度在前,经度在后)
           dis = Math.round(dis);
           console.log(dis);
           // Tex.innerHTML = "还有" + dis + "公里";
@@ -55,7 +56,11 @@ function getLocation() {
           // btn.innerText = "参与活动";
           $(".page-8 i").text(dis);
       }
-  }, { enableHighAccuracy: true })
+    }, { enableHighAccuracy: true })
+  }catch(e){
+    alert(e);
+  }
+  
 }
 // function getdis() {
 //   btn = document.getElementById("disBtn");
