@@ -83,10 +83,10 @@ body {
   justify-content: center;
 }
 .item-7 .title {
-  width: 80%;
+  text-align: center;
 }
 .item-7 h5 {
-  color: #fff4e4;
+  color: #e7732c;
   margin: 7rem 0 0 0;
   text-align: center;
   font-size: 2rem;
