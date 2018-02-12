@@ -44,10 +44,14 @@ html, body{
   }
   &-9{
     background-image: url('../img/09/bg.jpg');
+    // background-color: #a30000;
   }
-  // &-10{
-  //   background-image: url('../img/10/10.jpg'); 
-  // }
+  &-10{
+    background-image: url('../img/10/bg.png');
+    background-color: #a30000;
+    background-size: cover;
+    background-position: center 0;
+  }
 }
 .item{
   width: 100%;
@@ -121,13 +125,38 @@ html, body{
   &-9{
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    div{
+      margin: 1rem 0;
+    }
     .title{
       width: 60%;
       position: relative;
       top: -6rem;
     }
+    .anniu{
+      width: 60%;
+    }
+    .wenzi{
+      color: #fff;
+      font-size: 1.5rem;
+    }
   }
   &-10{
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    div{
+      margin: 1rem 0;
+    }
+    .title{
+      margin-top: 3rem;
+      width: 60%;
+    }
+    .anniu{
+      width: 30%;
+    }
+    
   }
 }
 .music{
