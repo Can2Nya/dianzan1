@@ -46,9 +46,21 @@ body {
 .item-9 .anniu {
   width: 60%;
 }
+.item-9 .anniu div {
+  width: 100%;
+}
 .item-9 .wenzi {
   color: #fff;
   font-size: 1.5rem;
+}
+.item-9 .share {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-image: url('/img/qita/0.png');
+  margin: 0;
+  background-position: 100% 0;
 }
 .item-10 {
   justify-content: flex-start;

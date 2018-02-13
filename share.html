@@ -16,9 +16,21 @@
           <div class="title js-animate animated" data-animate="fadeInUp">
               <div class="wenzi"><div>当前助力人数:<i>0</i> <br>（需要5人助力）</div></div>
               <div class="anniu">
-                <img src="/img/09/zhuli.png" alt="" width="100%">
+                <div class="zhuli" style="display: none">
+                    <img  src="/img/09/zhuli.png" alt="" width="100%">
+                </div>
+                <div class="yaoqing" style="display: none">
+                    <img src="/img/10/anniu.png" alt="" width="100%">
+                </div>
+                <div class="lingqu" style="display: none">
+                    <img src="/img/09/lingqu.png" alt="" width="100%">
+                </div>
+                <!-- <img class="yaoqing" src="/img/10/anniu.png" alt="" width="100%" style="display: none">
+                <img class="lingqu" src="/img/09/lingqu.png" alt="" width="100%" style="display: none"> -->
               </div>
           </div>
+          <div class="share" style="display: none"></div>
+          
         </div>
       </div>
       <div class="page page-10">
@@ -42,9 +54,31 @@
   <script src="../js/zepto.min.js"></script>
   <script src="../js/zepto.fullpage.js"></script>
   <script>
-    // $('.guan').on('click', function() {
-    //   $('.page-10 .motai').toggle()
-    // })
+    $.fn.fullpage.stop();
+
+    if(location.hash == '#index'){
+      // 如果是从index跳过来的
+      $('.yaoqing').show();
+    }
+    if($('.wenzi i').text() == '5'){
+      // 如果点赞人数够了
+      $('.lingqu').show();
+    }
+    if(location.hash == ''){
+      // 如果是直接点进去的
+      $('.zhuli').show();
+    }
+
+    $('.yaoqing').on('click', function() {
+      // 点助力出分享引导
+      $('.share').show();
+    })
+    
+    $('.lingqu').on('click', function() {
+      // 领取成功跳转
+      $.fn.fullpage.moveNext(true);
+    })
+
     $('.wp-inner').fullpage({
     duration: 100,
     change: function (e) {
