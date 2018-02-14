@@ -149,6 +149,10 @@ body {
 .item-10 div {
   margin: 1rem 0;
 }
+.item-10 input {
+  font-size: 1rem;
+  margin-top: -0.8rem;
+}
 .item-10 .title {
   margin-top: 3rem;
   width: 60%;
