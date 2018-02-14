@@ -1,12 +1,14 @@
-<html lang="en">
+﻿<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/zepto.fullpage.css">
-  <link rel="stylesheet" href="../css/animate.css">
-  <title>hh</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/zepto.fullpage.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="js/Token.js"></script>
+    <title>一起助力迎娶常宁千人庙会VIP入场券</title>
 </head>
 <body>
   <div id="music" class="music">
@@ -59,8 +61,9 @@
         <div class="page page-7">
           <div class="item item-7 js-animate animated" data-animate="fadeIn">
             <div class="title js-animate animated" data-animate="fadeInUp">
-              <h5>距离过年还有<i>9</i>天</h5>
+              <h5>距离元宵节还有<i>9</i>天</h5>
               <img src="/img/07/biaoti.png" alt="" width="60%">
+              <img src="/img/07/miaoshu.png" alt="" width="60%" style="margin-top: 1rem;">
             </div>
           </div>
         </div>
@@ -142,53 +145,53 @@
 </script>
 <script>
   //音乐需求
-    // var bgAudio = new Audio();
-    // bgAudio.loadStatus = 'unload';
-    // bgAudio.loop = true;
-    // function loadAudio(audio, url, callback) {
-    //     audio.src = url;
-    //     audio.load();
-    //     audio.addEventListener('canplay', function () {
-    //         bgAudio.loadStatus = 'loaded';
-    //         callback();
-    //     });
-    //     audio.addEventListener('loadstart', function () {
-    //         bgAudio.loadStatus = 'loading';
-    //     });
-    // }
-    // function playAudio(){
-    //     if (bgAudio.loadStatus === 'unload') {
-    //         loadAudio(bgAudio, '../media/bg.mp3', function () {
-    //             playAudio();
-    //         });
-    //         return 1;
-    //     }
-    //     bgAudio.play();
-    // }
-    // function stopAudio() {
-    //     bgAudio.pause();
-    // }
-    // bgAudio.addEventListener('playing' ,function (e) {
-    //     $('#music .music-btn').addClass('play');
-    // });
-    // bgAudio.addEventListener('pause' ,function (e) {
-    //     $('#music .music-btn').removeClass('play');
-    // });
-    // $('body').one('touchstart', function () {
-    //     playAudio();
-    //     $('#music').on('touchstart', function (e) {
-    //         if (bgAudio.paused) {
-    //             playAudio();
-    //             return 0;
-    //         }
-    //         stopAudio();
-    //         return 1;
-    //     });
-    // });
-    // window.onload = function() {
-    //     if (bgAudio.loadStatus !== 'unload') {return;}
-    //     playAudio();
-    // };
+    var bgAudio = new Audio();
+    bgAudio.loadStatus = 'unload';
+    bgAudio.loop = true;
+    function loadAudio(audio, url, callback) {
+        audio.src = url;
+        audio.load();
+        audio.addEventListener('canplay', function () {
+            bgAudio.loadStatus = 'loaded';
+            callback();
+        });
+        audio.addEventListener('loadstart', function () {
+            bgAudio.loadStatus = 'loading';
+        });
+    }
+    function playAudio(){
+        if (bgAudio.loadStatus === 'unload') {
+            loadAudio(bgAudio, '/img/qita/01.mp3', function () {
+                playAudio();
+            });
+            return 1;
+        }
+        bgAudio.play();
+    }
+    function stopAudio() {
+        bgAudio.pause();
+    }
+    bgAudio.addEventListener('playing' ,function (e) {
+        $('#music .music-btn').addClass('play');
+    });
+    bgAudio.addEventListener('pause' ,function (e) {
+        $('#music .music-btn').removeClass('play');
+    });
+    $('body').one('touchstart', function () {
+        playAudio();
+        $('#music').on('touchstart', function (e) {
+            if (bgAudio.paused) {
+                playAudio();
+                return 0;
+            }
+            stopAudio();
+            return 1;
+        });
+    });
+    window.onload = function() {
+        if (bgAudio.loadStatus !== 'unload') {return;}
+        playAudio();
+    };
 </script>
 </body>
 <body>

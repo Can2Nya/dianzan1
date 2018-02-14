@@ -33,7 +33,7 @@ function getLocation() {
       // console.log(r.point)
       if (this.getStatus() == BMAP_STATUS_SUCCESS) {
           coords = r.point;
-          dis = GetDistance(r.point.lat, r.point.lng, 26.07, 112.07);//经纬度(维度在前,经度在后)
+          dis = GetDistance(r.point.lat, r.point.lng, 26.427238, 112.401824);//经纬度(维度在前,经度在后)
           dis = Math.round(dis);
           $(".page-8 i").text(dis);
       }
@@ -54,5 +54,5 @@ $('#next').on('click', function(){
     alert('请填写正确的电话');
     return;
   }
-  location.href = location.origin + '/share.html';
+  location.href = location.origin + '/share.html#index';
 })
